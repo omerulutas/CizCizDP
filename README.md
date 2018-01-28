@@ -3,6 +3,13 @@
 
 This study is containing Design Pattern Lecture's  Observer and Strategy Patterns topics with illustration and implementation . Project is implemented in Java. I implement in my university life.
 
+# Description of CizCizDP
+### Scenario
+
+ CizCiz is an online color and drawing game for children which aims to teach seasons. 
+ As the admin enters the date and time, the system gets the appropriate season and the drawings (which belong to the online users) get adapted to the current season. 
+ By default all the trees are green however if the admin enters a date in winter all of the trees become white,  and yellow in autumn. They are green in spring and summer. 
+
 # Installation - The software you need
 
 (Installation instructions are for the microsoft operating system.)
