@@ -1,0 +1,1 @@
+# Observer and Strategy Patterns
