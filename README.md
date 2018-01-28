@@ -8,7 +8,11 @@ This study is containing Design Pattern Lecture's  Observer and Strategy Pattern
 
  CizCiz is an online color and drawing game for children which aims to teach seasons. 
  As the admin enters the date and time, the system gets the appropriate season and the drawings (which belong to the online users) get adapted to the current season. 
- By default all the trees are green however if the admin enters a date in winter all of the trees become white,  and yellow in autumn. They are green in spring and summer. 
+ By default all the trees are green however if the admin enters a date in winter all of the trees become white,  and yellow in autumn. They are green in spring and summer.
+ 
+ ### UML Diagram
+ ![f](https://user-images.githubusercontent.com/19168041/35488769-b73c0692-049e-11e8-98ab-06d60a68bc3e.png)
+
 
 # Installation - The software you need
 
