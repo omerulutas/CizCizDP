@@ -22,7 +22,9 @@ public class CizCizSimulate {
         
         
        season.changeSeason();
-       
+        
+        
+        
         
     }
 }

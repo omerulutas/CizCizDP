@@ -2,6 +2,7 @@ package treeObservers;
 
 import colorStrategy.ColorBehavior;
 import colorStrategy.GreenColorBehavior;
+import seasonSubject.SeasonsEnum;
 
 /**
  *
@@ -10,6 +11,7 @@ import colorStrategy.GreenColorBehavior;
 public abstract class TreeObserver {
 
     String name;
+    SeasonsEnum season;
     private ColorBehavior colorBehavior;
 
     public TreeObserver() {
@@ -17,17 +19,23 @@ public abstract class TreeObserver {
     }
 
     /**
-     * Mission: Update color of the tree according to seasonState
+     * Mission: Update color of the tree according to seasonsEnum
      *
      * @param seasonState
      */
-    public abstract void update(int seasonState);
+    public abstract void update(SeasonsEnum seasonsEnum);
 
+    public void displayTree(){
+        System.out.print(season + ">> ");
+        System.out.print(name + ": ");
+        colorDisplay();
+    }
+    
     /**
      * Mission: Display color strategy.
      */
     public void colorDisplay() {
-        System.out.print(name + ": ");
+        
         colorBehavior.applyColor();
     }
 

@@ -2,6 +2,7 @@
 package treeObservers;
 
 import colorStrategy.*;
+import seasonSubject.SeasonsEnum;
 /**
  *
  * @author OMER
@@ -12,12 +13,13 @@ public class FagusTree extends TreeObserver{
         this.name = "Fagus Tree";
     }
     /**
-     * Mission: Update color of the FagusTree tree according to seasonState
+     * Mission: Update color of the FagusTree tree according to seasonsEnum
      * @param seasonState 
      */
     @Override
-    public void update(int seasonState) {
-        
+    public void update(SeasonsEnum seasonsEnum) {
+        season = seasonsEnum;
+        int seasonState = seasonsEnum.getValue();
         switch (seasonState) {
             case 1:
                 setColorBehavior(new WhiteColorBehavior());
@@ -33,7 +35,7 @@ public class FagusTree extends TreeObserver{
                 break;
         }
 
-        colorDisplay();
+        displayTree();
     }
     
 }

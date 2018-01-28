@@ -6,16 +6,19 @@ import java.util.List;
 import treeObservers.TreeObserver;
 
 /**
- *
+ * SeasonSubject is subject of tree observers.
+ * Mission: Change season state and notify all of the observers after changing.
  * @author OMER
  */
 public class SeasonSubject {
     
     /**
-     * This is list of the observer trees 
+     * This variable keeps list of the observers list. 
      */
     private final List<TreeObserver> treeObservers;
-    private int state;
+    private SeasonsEnum seasonsEnum;
+    
+    
     
     public SeasonSubject(int time) {
         treeObservers= new ArrayList<>();
@@ -29,10 +32,10 @@ public class SeasonSubject {
      public void changeSeason() throws InterruptedException{
         while(true){
             for(int minute=1; minute<=4; minute++){
-                state=minute;
+                seasonsEnum = SeasonsEnum.valueof(minute);
                 System.out.println("");
                 notifyTrees();
-                Thread.sleep(500);
+                Thread.sleep(1000);
             }
         }
     }
@@ -56,11 +59,11 @@ public class SeasonSubject {
         }
     }
  
-    public int getState() {
-        return state;
+    public SeasonsEnum getState() {
+        return seasonsEnum;
     }
-    public void setState(int state) {
-        this.state = state;
+    public void setState(SeasonsEnum seasonsEnum) {
+        this.seasonsEnum = seasonsEnum;
     }
     
 }

@@ -2,6 +2,7 @@
 package treeObservers;
 
 import colorStrategy.*;
+import seasonSubject.SeasonsEnum;
 
 /**
  *
@@ -14,12 +15,13 @@ public class AlnusTree extends TreeObserver{
     }
 
     /**
-     * Mission: Update color of the AlnusTree tree according to seasonState
+     * Mission: Update color of the AlnusTree tree according to seasonsEnum
      * @param seasonState 
      */
     @Override
-    public void update(int seasonState) {
-        
+    public void update(SeasonsEnum seasonsEnum) {
+        season = seasonsEnum;
+        int seasonState = seasonsEnum.getValue();
         switch (seasonState) {
             case 1:
                 setColorBehavior(new WhiteColorBehavior());
@@ -35,7 +37,7 @@ public class AlnusTree extends TreeObserver{
                 break;
         }
 
-        colorDisplay();
+        displayTree();
     }
     
     
