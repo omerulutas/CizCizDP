@@ -1,4 +1,4 @@
-# Observer and Strategy Patterns vvv
+# Observer and Strategy Patterns
 
 
 This study is containing Design Pattern Lecture's  Observer and Strategy Patterns topics with illustration and implementation . Project is implemented in Java. I implement in my university life.
